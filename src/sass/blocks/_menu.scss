@@ -8,13 +8,27 @@
     justify-content: space-between;
     align-items: flex-end;
     cursor: pointer;
+    transition: all .6s;
+    &:hover {
+        transition: all .3s;
+        span {
+            transition: all .3s;
+            width: 36px;
+        }
+        span.long {
+            transition: all .3s;
+            width: 30px;
+        }
+    }
     span {
+        transition: all .3s;
         display: block;
         width: 30px;
         height: 3px;
         background-color: #fff;
     }
     span.long {
+        transition: all .3s;
         width: 36px;
     }
 }
@@ -22,13 +36,18 @@
 .menu {
     position: fixed;
     top: 0;
-/*     left: -100%; */
+    left: -100%;
     width: 100%;
     height: 100vh;
     z-index: 10;
-/*     visibility: hidden;
-    opacity: 0; */
+    visibility: hidden;
+    opacity: 0;
     transition: all 0.6s;
+    &.active {
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
     &__block {
         position: relative;
         /* left: -100%; */
@@ -39,6 +58,7 @@
         background-color: $main-color;
         transition: all 0.6s;
         box-shadow: 25px 0px 100px rgba(200, 0, 0, 0.384);
+        z-index: 10;
     }
     &__close {
         position: absolute;
@@ -60,7 +80,7 @@
         font-size: 24px;
         line-height: 36px;
         margin-bottom: 15px;
-        &::before {
+        &:before {
             content: 'G';
             position: absolute;
             left: -35px;
@@ -85,5 +105,33 @@
                 text-shadow: 5px 5px 4px rgba(0, 20, 0, 1);
             }
         }
+    }
+    &__social {
+        position: absolute;
+        color: #fff;
+        width: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        a {
+            color: #fff;
+            transition: all 0.6s;
+            &:hover {
+                text-decoration: none;
+                text-shadow: 5px 5px 4px rgba(0, 20, 0, 1);
+            }
+        }
+    }
+    &__owerlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: .75;
     }
 }
