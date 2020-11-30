@@ -9,11 +9,29 @@
     &_fz16px {
         font-size: 16px;
     }
+    &_fz20px {
+        font-size: 20px;
+        line-height: 30px;
+    }
     &_fz36px {
         font-size: 36px;
+        line-height: 60px;
     }
     &_fz48px {
         font-size: 48px;
         margin-top: 10px;
+    }
+    &__section-title{
+        position: relative;
+        text-align: center;
+        @include before_circle;
+        &:before {
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__section-subtitle {
+        text-align: center;
     }
 }

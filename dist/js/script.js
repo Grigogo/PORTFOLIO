@@ -1,6 +1,6 @@
 const hamburger = document.querySelector('.hamburger'),
-    menu = document.querySelector('.menu'),
-    closeElem = document.querySelector('.menu__close');
+      menu = document.querySelector('.menu'),
+      closeElem = document.querySelector('.menu__close');
 
 hamburger.addEventListener('click', () => {
     menu.classList.add('active');
@@ -8,4 +8,11 @@ hamburger.addEventListener('click', () => {
 
 closeElem.addEventListener('click', () => {
     menu.classList.remove('active');
+});
+
+const counters = document.querySelectorAll('.percent'),
+    lines = document.querySelectorAll('.skills__progress-line-done');
+    
+counters.forEach( (item, i) => {
+    lines[i].style.width = item.innerHTML;
 });
