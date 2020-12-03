@@ -12,3 +12,18 @@
         z-index: -1;
     }
 }
+
+@mixin before_circle-min {
+    &::before {
+        position: absolute;
+        top: 10%;
+        left: -12%;
+        box-shadow: 0 4px 4px rgba(255,255,255,.171);
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background: $main-color;
+        z-index: -1;
+    }
+}

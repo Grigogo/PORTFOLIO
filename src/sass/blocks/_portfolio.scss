@@ -23,7 +23,6 @@
         filter: grayscale(90%);
         img {
             width: 100%;
-            overflow: hidden;
         }
         &:hover {
             transform: scale(1.05);
@@ -31,3 +30,7 @@
         }
     }
 }
+                
+                
+                
+                
