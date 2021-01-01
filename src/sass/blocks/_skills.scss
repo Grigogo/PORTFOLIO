@@ -44,13 +44,8 @@
             display: flex;
             justify-content: space-between;
             font-size: 14px;
-            line-height: 21px;
-            div {
-                &::before {
-                    position: absolute;
-                    @include before_circle;
-                }
-            }
+            line-height: 27px;
+            @include before_circle-title;
         }
         &-line {
             margin-top: 20px;
